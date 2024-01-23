@@ -8,11 +8,10 @@ public class conexaoBD {
     private static final String url = "jdbc:mysql://localhost:3306/lojaonline";
     private static final String user = "root";
     private static final String password = "rC.)#246f+";
-    private static Connection conectar;
+    private static Connection conectar = null;
 
 
-    public static conexaoBD conexao() {
-
+    public static Connection conexao() {
         try {
             if (conectar == null) {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -23,6 +22,6 @@ public class conexaoBD {
 
         }
 
-        return null;
+        return conectar;
     }
 }

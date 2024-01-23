@@ -48,4 +48,8 @@ public class cadastros {
     public void setCEP(String CEP) {
         this.CEP = CEP;
     }
+
+
+
+
 }
