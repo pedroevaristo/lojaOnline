@@ -1,13 +1,11 @@
 package Cliente;
-import ConexaoBD.conexaoBD;
-import Cliente.cadastros;
 
 import java.util.Scanner;
 
 public class logins {
     public boolean checar_Login(){
         Scanner sc = new Scanner(System.in);
-        cadastros checar = new cadastros();
+        informacoes checar = new informacoes();
         System.out.println("Digite seu email e senha");
         String email = sc.nextLine();//qual a diferença entre next e next line
         String senha = sc.next();

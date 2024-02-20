@@ -1,6 +1,6 @@
 package Cliente;
 
-public class cadastros {
+public class informacoes {
     private String nome;
     private String sobrenome;
     private String email;
@@ -49,7 +49,5 @@ public class cadastros {
         this.CEP = CEP;
     }
 
-
-
-
 }
+
