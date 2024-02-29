@@ -1,13 +1,13 @@
 package Cliente;
 import java.util.Scanner;
-
 public class cadastro {
     public void cadastrando(){
-        private
-        informacoes info = new informacoes();
+        //fazer um hashmap aqui para armazena e depois repassar ao banco de dados
+
         Scanner sc = new Scanner(System.in);
 
 
+    // fazer com se toda vez que entrar aqui vai ser + 1
 
         System.out.println("Digite as informações abaixo: ");
         System.out.println("Nome: ");
@@ -19,14 +19,14 @@ public class cadastro {
         System.out.println("Senha ");
         String senha = sc.next();
         //System.out.println(""); aqui fazer um verificador se a senha é forte, um sistema proprio
-        System.out.println("CEP ");
+        System.out.println("CEP ");//fazer a verificação por meio de api que consulta se o cep realmente existe
         String cep = sc.next();
 
-
-        //fazer a verificação por meio de api que consulta se o cep realmente existe
-
         System.out.println("armazenando...\n");
-        info_User = info();
+        // aqui vou criar uma chave de id para cada user cadastrado
+        informacoes info = new informacoes(nome, sobrenome, email, senha, cep);
 
     }
+
+
 }

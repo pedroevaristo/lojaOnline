@@ -7,7 +7,16 @@ public class informacoes {
     private String senha;
     private String CEP;//Ou será que eu uso int?
 
-    //colocar confirmação de login por e-mail
+
+    //colocar confirmação de login por e-mail e senha
+    public informacoes(String nome, String sobrenome, String email, String senha, String CEP) {
+        this.nome = nome;   //entender sobre essa parte do código
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.senha = senha;
+        this.CEP = CEP;
+
+    }
 
     public String getNome() {
         return nome;

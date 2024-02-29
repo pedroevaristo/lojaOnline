@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
 public class salvando{
-   public void salvando(){
-       informacoes informacao = new informacoes();
+
+    public static void salvando(informacoes informacao){
 
        String sql = "insert into registro(nome, sobrenome, cep, email, senha) values (?,?,?,?,?)";
 
@@ -15,7 +16,6 @@ public class salvando{
 
        try {
            conexao = conexaoBD.conexao();
-
 
            pstm = (PreparedStatement) conexao.prepareStatement(sql);
 
