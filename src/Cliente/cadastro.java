@@ -1,6 +1,7 @@
 package Cliente;
 import java.util.Scanner;
 public class cadastro {
+    private static int incremento = 0;
     public void cadastrando(){
         //fazer um hashmap aqui para armazena e depois repassar ao banco de dados
 
@@ -10,6 +11,8 @@ public class cadastro {
     // fazer com se toda vez que entrar aqui vai ser + 1
 
         System.out.println("Digite as informações abaixo: ");
+
+        int id = incremento++;
         System.out.println("Nome: ");
         String nome = sc.next();
         System.out.println("Sobrenome: ");
@@ -24,7 +27,7 @@ public class cadastro {
 
         System.out.println("armazenando...\n");
         // aqui vou criar uma chave de id para cada user cadastrado
-        informacoes info = new informacoes(nome, sobrenome, email, senha, cep);
+        informacoes info = new informacoes(id, nome, sobrenome, email, senha, cep);
 
     }
 
