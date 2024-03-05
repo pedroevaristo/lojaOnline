@@ -8,42 +8,31 @@ import java.util.List;
 import ConexaoBD.conexaoBD;
 import Cliente.informacoes;
 
-public abstract class ClientImplDAO implements DAO{
+public abstract class ClientImplDAO implements DAO{//Aqui seria a pasta de functions do C++
     Connection con = conexaoBD.conexao();
-    PreparedStatement ps = null;
-    ResultSet rs = null;
-    @Override
-    public Object encontrar(int id) throws SQLException {
-        informacoes info = new informacoes();
-        info.setId_User(id);
-        try{
 
-        }
+    @Override
+    public int insert(informacoes cliente) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public int consult_by_id(Integer id) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public int update(informacoes cliente) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public int delete_by_id(Integer id) {
+        return 0;
+    }
+
+    @Override
+    public List<informacoes> show_all_clients() throws SQLException {
         return null;
-    }
-
-    @Override
-    public List all() throws SQLException {
-        return null;
-    }
-
-    @Override
-    public int salvar() throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public int inserir() throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public int update() throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public int delete() {
-        return 0;
     }
 }

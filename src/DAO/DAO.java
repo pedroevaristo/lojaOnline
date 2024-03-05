@@ -6,14 +6,16 @@ import Cliente.informacoes;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface DAO<cliente> {
+public interface DAO {// isso faz lembrar do header no C++ que era declarado as variaveis em sua maioria
 
-    cliente encontrar(int id) throws SQLException;
-    List<cliente> all() throws SQLException;
+    int insert (informacoes cliente) throws SQLException; // create
 
-    int salvar() throws SQLException;
-    int inserir() throws SQLException;
-    int update() throws SQLException;
-    int delete()
+    int consult_by_id (Integer id) throws SQLException;//read
+
+    int update (informacoes cliente)throws SQLException;
+
+    int delete_by_id (Integer id);
+
+    List<informacoes> show_all_clients() throws SQLException;
 
 }
