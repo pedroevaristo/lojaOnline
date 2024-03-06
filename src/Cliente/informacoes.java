@@ -6,12 +6,12 @@ public class informacoes {
     private String sobrenome;
     private String email;
     private String senha;
-    private String CEP;//Ou será que eu uso int?
+    private int CEP;//Ou será que eu uso int?
 
 
 
     //colocar confirmação de login por e-mail e senha
-    public informacoes(int id_User, String nome, String sobrenome, String email, String senha, String CEP) {//construtor
+    public informacoes(int id_User, String nome, String sobrenome, String email, String senha, int CEP) {//construtor
         this.id_user = id_User;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -60,11 +60,11 @@ public class informacoes {
         this.senha = senha;
     }
 
-    public String getCEP() {
+    public int getCEP() {
         return CEP;
     }
 
-    public void setCEP(String CEP) {
+    public void setCEP(int CEP) {
         this.CEP = CEP;
     }
 
