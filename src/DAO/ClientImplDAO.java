@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import ConexaoBD.conexaoBD;
 import Cliente.informacoes;
@@ -37,15 +38,12 @@ public abstract class ClientImplDAO implements DAO{//Aqui seria a pasta de funct
                 }
                 //conexaoBD fecha o resultset fazer na pasta de conexão
                 else{
-
+                //Aqui será onde colocará se o resultado da consulta no SQL não teve uma nova alteração no Banco de Dados
                 }
 
             }
 
         }catch(SQLException e){
-            throw new
-        }
-        finally{
 
         }
 
@@ -53,6 +51,21 @@ public abstract class ClientImplDAO implements DAO{//Aqui seria a pasta de funct
 
     @Override
     public int consult_by_id(Integer id) throws SQLException {
+        PreparedStatement statement = null;
+        ResultSet result= null;
+
+        try{
+            statement = con.prepareStatement("SELECT informacoes.* " + " ORDER BY nome ");
+            statement.setInt(1, id);
+            result = statement.executeQuery();
+
+            if(result.next()){// aqui vai ler o a proxima linha da coluna 0 que é o indice
+                informacoes informa =
+            }
+
+
+        }
+
         return 0;
     }
 
@@ -63,6 +76,19 @@ public abstract class ClientImplDAO implements DAO{//Aqui seria a pasta de funct
 
     @Override
     public int delete_by_id(Integer id) {
+
+        PreparedStatement statement = null;
+         try{
+             statement = con.prepareStatement("DELETE FROM information WHERE id = ?");
+             statement.setInt(1, id);
+
+             statement.executeUpdate();
+         }
+         catch (SQLException e) {
+             throw new RuntimeException(e);
+         }
+
+
         return 0;
     }
 

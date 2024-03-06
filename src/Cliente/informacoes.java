@@ -1,7 +1,7 @@
 package Cliente;
 
 public class informacoes {
-    private int id_user;
+    private int id;
     private String nome;
     private String sobrenome;
     private String email;
@@ -11,8 +11,8 @@ public class informacoes {
 
 
     //colocar confirmação de login por e-mail e senha
-    public informacoes(int id_User, String nome, String sobrenome, String email, String senha, int CEP) {//construtor
-        this.id_user = id_User;
+    public informacoes(int id, String nome, String sobrenome, String email, String senha, int CEP) {//construtor
+        this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
@@ -21,11 +21,11 @@ public class informacoes {
 
     }
 
-    public int getId_User() {
-        return id_user;
+    public int getId() {
+        return id;
     }
-    public void setId_User(int id_User) {
-        this.id_user = id_User;
+    public void setId_User(int id) {
+        this.id = id;
     }
 
     public String getNome() {
