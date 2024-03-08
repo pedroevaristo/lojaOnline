@@ -24,4 +24,8 @@ public class conexaoBD {
 
         return conectar;
     }
+
+    public static Connection CloseCon(){
+
+    }
 }

@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface DAO {// isso faz lembrar do header no C++ que era declarado as variaveis em sua maioria
 
-    int insert (informacoes cliente) throws SQLException; // create
+    informacoes insert (informacoes cliente) throws SQLException; // create
 
-    int consult_by_id (Integer id) throws SQLException;//read
+    informacoes consult_by_id (Integer id) throws SQLException;//read
 
     int update (informacoes cliente)throws SQLException;
 
