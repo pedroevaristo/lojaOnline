@@ -1,9 +1,9 @@
 package ConexaoBD;
 import java.sql.Connection;
-import java.sql.*;
 import java.sql.SQLException;
+import java.sql.DriverManager;
 
-public class conexaoBD {
+public class conexaoSingleton {
 
     private static final String url = "jdbc:mysql://localhost:3306/lojaonline";
     private static final String user = "root";
@@ -11,7 +11,10 @@ public class conexaoBD {
     private static Connection conectar = null;
 
 
-    public static Connection conexao() {
+
+    public static Connection conexaodb() {
+        System.out.println("Connecting...");
+
         try {
             if (conectar == null) {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -1,11 +1,16 @@
 package Cliente;
+
+import ConexaoDB.conexaoSingleton;
 import java.util.Scanner;
+
 public class cadastro {
     private static int incremento = 0;
     public void cadastrando(){
         //fazer um hashmap aqui para armazena e depois repassar ao banco de dados
 
         Scanner sc = new Scanner(System.in);
+        informacoes infor = new informacoes.informacoesBuilder().build();
+
 
 
     // fazer com se toda vez que entrar aqui vai ser + 1
@@ -27,7 +32,7 @@ public class cadastro {
 
         System.out.println("armazenando...\n");
         // aqui vou criar uma chave de id para cada user cadastrado
-        informacoes info = new informacoes(id, nome, sobrenome, email, senha, cep);
+
 
     }
 
